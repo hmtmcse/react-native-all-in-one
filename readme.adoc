@@ -2,3 +2,34 @@
 = React Native Expo Example Application
 
 In this Application Listing all the useful component.
+
+
+== Run Application
+```bash
+cd react-native-all-in-one
+pnpm install
+pnpm start
+
+# For Android Device Run
+pnpm expo run:android
+
+# For Production Build
+cd android
+gradlew assembleRelease
+adb install -r app/build/outputs/apk/release/app-release.apk
+```
+
+
+== Android Emulator Commands
+```
+emulator -list-avds
+emulator -avd Pixel_6_Pro -wipe-data
+emulator -avd Pixel_6_Pro
+adb devices
+adb -s emulator-5554 emu kill
+
+emulator -avd Pixel_6_Pro -gpu swiftshader_indirect -no-snapshot-load
+
+taskkill /F /IM qemu-system-x86_64.exe
+taskkill /F /IM emulator.exe
+```
