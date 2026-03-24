@@ -1,0 +1,20 @@
+
+== Change App Name & Package Name
+```json
+{
+  "expo": {
+    "name": "Bangla Fighter App",
+    "slug": "bangla-fighter-app",
+    "android": {
+      "package": "com.banglafighter.app"
+    },
+    "ios": {
+      "bundleIdentifier": "com.banglafighter.app"
+    }
+  }
+}
+```
+
+* Open `app.json`
+* *name :* App display name (shown on phone)
+* *slug :* internal project name (URL / build ID)
