@@ -11,6 +11,7 @@ pnpm install
 pnpm start
 
 # For Android Device Run
+pnpm expo prebuild --clean
 pnpm expo run:android
 
 # For Production Build

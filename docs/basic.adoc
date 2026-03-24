@@ -1,5 +1,6 @@
 
 == Change App Name & Package Name
+* Open `app.json`
 ```json
 {
   "expo": {
@@ -14,7 +15,46 @@
   }
 }
 ```
-
-* Open `app.json`
 * *name :* App display name (shown on phone)
 * *slug :* internal project name (URL / build ID)
+
+
+== Change Splash Screen
+* Open `app.json`
+```json
+{
+  "expo": {
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    }
+  }
+}
+```
+
+* *image :* path to your new splash image.
+* *resizeMode :*
+** *"contain"* → fits the image inside the screen, keeps aspect ratio.
+** *"cover"* → fills the whole screen, may crop edges.
+* *backgroundColor :* background behind the image (if the image has transparency).
+
+
+== Change Splash Screen
+* Open `app.json`
+```json
+{
+  "expo": {
+    "icon": "./assets/icon.png",
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/icon.png",
+        "backgroundColor": "#ffffff"
+      }
+    }
+  }
+}
+```
+* `icon`: default icon for older devices.
+* `android.adaptiveIcon.foregroundImage`: main icon for modern Android devices.
+* `android.adaptiveIcon.backgroundColor`: background behind the icon.
