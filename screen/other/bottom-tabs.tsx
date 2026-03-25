@@ -4,12 +4,12 @@ import {
     BottomTabBarButtonProps
 } from '@react-navigation/bottom-tabs';
 import {Ionicons} from '@expo/vector-icons';
-import {NavigationContainer, RouteProp} from '@react-navigation/native';
+import {RouteProp} from '@react-navigation/native';
 import Home from "../page/home";
 import React from "react";
 import ExpoComponent from "../page/expo-component";
 import {CustomTabBarButton} from "./custom-tabbar-button";
-import RnrComponent from "@/screen/page/rnr-component";
+import RnrComponent from "@/screen/rnr-component/rnr-component";
 
 export type TabItem = {
     name: string;

@@ -5,12 +5,13 @@ const Stack = createNativeStackNavigator();
 
 export default function RnrComponent() {
     return (
-        <Stack.Navigator>
+        <Stack.Navigator screenOptions={{ headerShown: false }}>
             {componentMapping.map(component => (
                 <Stack.Screen
                     key={component.url}
                     name={component.url}
                     component={component.component}
+                    options={{ title: component.name }}
                 />
             ))}
         </Stack.Navigator>

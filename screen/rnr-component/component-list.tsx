@@ -6,11 +6,13 @@ import { Text } from '@/components/ui/text';
 import {Icon} from "@/components/ui/icon";
 import {ChevronRight} from "lucide-react-native";
 import {View} from "react-native";
-import {componentMapping} from "./component-mapping";
+import {ComponentItem, componentMapping} from "./component-mapping";
+import {useNavigation} from "@react-navigation/native";
 
 
 export default function ComponentList() {
-    const visibleItems = componentMapping.filter(item => item.isShow !== false);
+    const visibleItems: ComponentItem[] = componentMapping.filter(item => item.isShow !== false);
+    const navigation = useNavigation();
   return (
     <View className="flex-1 bg-background px-4 pt-3">
       <Text className="text-lg font-bold pb-4">
@@ -25,6 +27,9 @@ export default function ComponentList() {
                     variant="outline"
                     size="lg"
                     unstable_pressDelay={100}
+                    onPress={() => {
+
+                    }}
                     className={cn(
                         'dark:bg-background border-border flex-row justify-between rounded-none border-b-0 pl-4 pr-3.5',
                         index === 0 && 'rounded-t-lg',
