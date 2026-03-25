@@ -1,6 +1,5 @@
 import React from "react";
-import { createDrawerNavigator } from '@react-navigation/drawer';
-import { NavigationContainer } from '@react-navigation/native';
+import {createDrawerNavigator} from '@react-navigation/drawer';
 import Home from '../page/home';
 
 export type DrawerItem = {
@@ -20,16 +19,14 @@ const Drawer = createDrawerNavigator<DrawerParamList>();
 
 export default function DrawerNavigator() {
     return (
-        <NavigationContainer>
-            <Drawer.Navigator initialRouteName="Home">
-                {drawerItems.map((item: DrawerItem) => (
-                    <Drawer.Screen
-                        key={item.name}
-                        name={item.name}
-                        component={item.component}
-                    />
-                ))}
-            </Drawer.Navigator>
-        </NavigationContainer>
+        <Drawer.Navigator initialRouteName="Home">
+            {drawerItems.map((item: DrawerItem) => (
+                <Drawer.Screen
+                    key={item.name}
+                    name={item.name}
+                    component={item.component}
+                />
+            ))}
+        </Drawer.Navigator>
     );
 }

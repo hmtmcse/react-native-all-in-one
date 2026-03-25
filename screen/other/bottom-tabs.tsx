@@ -49,52 +49,50 @@ const Tab = createBottomTabNavigator<TabParamList>();
 
 export default function BottomTabs() {
     return (
-        <NavigationContainer>
-            <Tab.Navigator
-                screenOptions={({
-                                    route,
-                                }: {
-                    route: RouteProp<TabParamList, string>;
-                }): BottomTabNavigationOptions => {
-                    const current = tabItems.find(item => item.name === route.name);
+        <Tab.Navigator
+            screenOptions={({
+                                route,
+                            }: {
+                route: RouteProp<TabParamList, string>;
+            }): BottomTabNavigationOptions => {
+                const current = tabItems.find(item => item.name === route.name);
 
-                    return {
-                        tabBarIcon: ({
-                                         color,
-                                         size,
-                                         focused,
-                                     }: {
-                            color: string;
-                            size: number;
-                            focused: boolean;
-                        }) => {
-                            const iconName = focused
-                                ? current?.icon.focused
-                                : current?.icon.unfocused;
+                return {
+                    tabBarIcon: ({
+                                     color,
+                                     size,
+                                     focused,
+                                 }: {
+                        color: string;
+                        size: number;
+                        focused: boolean;
+                    }) => {
+                        const iconName = focused
+                            ? current?.icon.focused
+                            : current?.icon.unfocused;
 
-                            return (
-                                <Ionicons
-                                    name={iconName ?? 'ellipse'}
-                                    size={size}
-                                    color={color}
-                                />
-                            );
-                        },
-                        tabBarActiveTintColor: '#007AFF',
-                        tabBarInactiveTintColor: 'gray',
-                        ...current?.options,
-                    };
-                }}
-            >
-                {tabItems.map((item: TabItem) => (
-                    <Tab.Screen
-                        key={item.name}
-                        name={item.name}
-                        component={item.component}
-                        options={item.options}
-                    />
-                ))}
-            </Tab.Navigator>
-        </NavigationContainer>
+                        return (
+                            <Ionicons
+                                name={iconName ?? 'ellipse'}
+                                size={size}
+                                color={color}
+                            />
+                        );
+                    },
+                    tabBarActiveTintColor: '#007AFF',
+                    tabBarInactiveTintColor: 'gray',
+                    ...current?.options,
+                };
+            }}
+        >
+            {tabItems.map((item: TabItem) => (
+                <Tab.Screen
+                    key={item.name}
+                    name={item.name}
+                    component={item.component}
+                    options={item.options}
+                />
+            ))}
+        </Tab.Navigator>
     );
 }

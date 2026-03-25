@@ -7,9 +7,10 @@ npx expo install react-native-gesture-handler
 
 `react-native-gesture-handler` makes touch interactions in React Native smooth, fast, and reliable.
 
-== native - drawer
+== native - drawer - bottom tabs
 ```bash
 pnpm add @react-navigation/native @react-navigation/drawer
 pnpm add @react-navigation/bottom-tabs
+pnpm add @react-navigation/native-stack
 pnpm add react-native-screens react-native-safe-area-context react-native-gesture-handler react-native-reanimated
 ```
