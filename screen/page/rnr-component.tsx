@@ -39,7 +39,6 @@ export default function RnrComponent() {
             )}
             ListFooterComponent={<View className="android:pb-safe"/>}
         />
-
     </View>
   );
 }

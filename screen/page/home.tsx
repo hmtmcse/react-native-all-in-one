@@ -5,7 +5,7 @@ import {AccordionPreview} from "./accordion-preview";
 export default function Home() {
     const {colorScheme} = useColorScheme();
     return (
-        <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
+        <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}} className={"m-3"}>
             <Text>
                 Home Page {colorScheme}
             </Text>
