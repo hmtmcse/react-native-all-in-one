@@ -13,4 +13,10 @@ export type ComponentItem = {
 export const componentMapping: ComponentItem[] = [
     {name: 'All Listing', url: "component-list", component: ComponentList, isShow: false},
     {name: 'Card', url: "rnr-card", component: RnrCard, isShow: true},
-]
+] as const
+
+type RouteNames = typeof componentMapping[number]["url"];
+
+export type RootStackParamList = {
+    [K in RouteNames]: undefined;
+};

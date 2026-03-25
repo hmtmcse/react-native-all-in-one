@@ -19,6 +19,7 @@ export type TabItem = {
         unfocused: keyof typeof Ionicons.glyphMap;
     };
     options?: BottomTabNavigationOptions;
+    isNested?: boolean
 };
 
 export const tabItems: TabItem[] = [
@@ -30,6 +31,7 @@ export const tabItems: TabItem[] = [
     {
         name: 'RNR UI',
         component: RnrComponent,
+        isNested: true,
         icon: {focused: 'add', unfocused: 'add'},
         options: {
             tabBarButton: (props: BottomTabBarButtonProps) => <CustomTabBarButton {...props} />,
@@ -51,27 +53,18 @@ const Tab = createBottomTabNavigator<TabParamList>();
 export default function BottomTabs() {
     return (
         <Tab.Navigator
-            screenOptions={({
-                                route,
-                            }: {
-                route: RouteProp<TabParamList, string>;
-            }): BottomTabNavigationOptions => {
+            screenOptions={({ route }: { route: RouteProp<TabParamList, string>; }): BottomTabNavigationOptions => {
                 const current = tabItems.find(item => item.name === route.name);
-
+                console.log('TAB ROUTE:', route)
+                console.log('TAB ROUTE:', current)
+                let headerShown: boolean = true
+                if (current && current.isNested){
+                    headerShown = false
+                }
                 return {
-                    tabBarIcon: ({
-                                     color,
-                                     size,
-                                     focused,
-                                 }: {
-                        color: string;
-                        size: number;
-                        focused: boolean;
-                    }) => {
-                        const iconName = focused
-                            ? current?.icon.focused
-                            : current?.icon.unfocused;
-
+                    headerShown: headerShown,
+                    tabBarIcon: ({ color, size, focused }: { color: string;  size: number; focused: boolean; }) => {
+                        const iconName = focused ? current?.icon.focused : current?.icon.unfocused;
                         return (
                             <Ionicons
                                 name={iconName ?? 'ellipse'}
