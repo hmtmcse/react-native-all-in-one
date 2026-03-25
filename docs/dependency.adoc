@@ -36,6 +36,13 @@ pnpm dlx @react-native-reusables/cli@latest add --all
 npx @react-native-reusables/cli doctor
 ```
 
+== Listview
+```
+pnpm add @shopify/flash-list
+npx expo install @shopify/flash-list
+```
+
 
 == UI Dependency
+* https://github.com/Shopify/flash-list
 * https://reactnativereusables.com/

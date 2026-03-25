@@ -9,6 +9,7 @@ import Home from "../page/home";
 import React from "react";
 import ExpoComponent from "../page/expo-component";
 import {CustomTabBarButton} from "./custom-tabbar-button";
+import RnrComponent from "@/screen/page/rnr-component";
 
 export type TabItem = {
     name: string;
@@ -27,8 +28,8 @@ export const tabItems: TabItem[] = [
         icon: {focused: 'home', unfocused: 'home-outline'},
     },
     {
-        name: 'Middle',
-        component: ExpoComponent,
+        name: 'RNR UI',
+        component: RnrComponent,
         icon: {focused: 'add', unfocused: 'add'},
         options: {
             tabBarButton: (props: BottomTabBarButtonProps) => <CustomTabBarButton {...props} />,

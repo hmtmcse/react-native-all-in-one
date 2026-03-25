@@ -10,11 +10,12 @@ import { PortalHost } from "@rn-primitives/portal";
 
 export default function App() {
     const { colorScheme } = useColorScheme();
+    const theme = NAV_THEME[colorScheme ?? 'light'];
     return (
-        <ThemeProvider value={NAV_THEME[colorScheme ?? 'light']}>
+        <ThemeProvider value={theme}>
             <GestureHandlerRootView style={{flex: 1}}>
                 <StatusBar style={colorScheme === 'dark' ? 'light' : 'dark'} />
-                <NavigationContainer>
+                <NavigationContainer theme={theme}>
                     <RootNavigator/>
                 </NavigationContainer>
                 <PortalHost />
