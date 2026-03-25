@@ -1,9 +1,13 @@
 import { View, Text } from 'react-native';
+import {useColorScheme} from "nativewind";
 
 export default function Home() {
-  return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Home Page</Text>
-    </View>
-  );
+    const {colorScheme} = useColorScheme();
+    return (
+        <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
+            <Text>
+                Home Page {colorScheme}
+            </Text>
+        </View>
+    );
 }
