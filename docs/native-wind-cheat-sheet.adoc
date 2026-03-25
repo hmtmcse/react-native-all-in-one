@@ -1,0 +1,95 @@
+= NativeWind Cheatsheet
+
+[cols="1,2,3", options="header"]
+|===
+|Category |Classes |Explanation
+
+|Layout & Flexbox
+|flex, flex-row, flex-col, flex-1
+|Controls layout direction and flexible sizing (row = horizontal, col = vertical)
+
+|Alignment (Cross Axis)
+|items-start, items-center, items-end
+|Aligns children vertically (in row) or horizontally (in column)
+
+|Justify (Main Axis)
+|justify-start, justify-center, justify-between, justify-around
+|Controls spacing along the main axis (row or column direction)
+
+|Spacing (Padding)
+|p-4, px-4, py-2, pt-2, pb-2
+|Adds inner spacing inside elements
+
+|Spacing (Margin)
+|m-4, mx-2, my-1
+|Adds outer spacing around elements
+
+|Sizing (Width/Height)
+|w-full, w-1/2, w-20, h-full, h-40
+|Controls element width and height
+
+|Colors (Background)
+|bg-blue-500, bg-red-100, bg-black
+|Sets background color
+
+|Colors (Text)
+|text-white, text-gray-800
+|Sets text color
+
+|Borders
+|border, border-2, border-gray-400
+|Adds border with width and color
+
+|Border Radius
+|rounded, rounded-lg, rounded-full
+|Controls corner roundness
+
+|Typography (Size)
+|text-xs, text-sm, text-lg, text-xl
+|Controls font size
+
+|Typography (Weight)
+|font-light, font-medium, font-bold
+|Controls font thickness
+
+|Text Alignment
+|text-left, text-center, text-right
+|Aligns text horizontally
+
+|Text Transform
+|uppercase, lowercase, capitalize
+|Changes text case
+
+|Line & Letter Spacing
+|leading-6, tracking-wide
+|Controls line height and letter spacing
+
+|Effects
+|shadow, shadow-md, opacity-50
+|Adds shadow and transparency
+
+|Positioning
+|relative, absolute, top-0, left-0, bottom-4, right-2
+|Controls element positioning
+
+|Z-Index
+|z-10
+|Controls stacking order
+
+|Transform
+|rotate-45, scale-110, translate-x-2, translate-y-4
+|Applies transformations like rotate, scale, move
+
+|Dark Mode
+|bg-white dark:bg-black, text-black dark:text-white
+|Applies styles based on dark/light theme
+
+|Platform Specific
+|ios:pt-4, android:pt-2
+|Applies styles per platform (iOS or Android)
+
+|Conditional Styling
+|`p-4 ${active ? "bg-blue-500" : "bg-gray-300"}`
+|Dynamically changes styles using JS conditions
+
+|===
