@@ -1,5 +1,6 @@
 import { View, Text } from 'react-native';
 import {useColorScheme} from "nativewind";
+import {AccordionPreview} from "./accordion-preview";
 
 export default function Home() {
     const {colorScheme} = useColorScheme();
@@ -8,6 +9,7 @@ export default function Home() {
             <Text>
                 Home Page {colorScheme}
             </Text>
+            <AccordionPreview/>
         </View>
     );
 }
