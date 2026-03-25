@@ -13,6 +13,7 @@ pnpm start
 # For Android Device Run
 pnpm expo prebuild --clean
 pnpm expo run:android
+pnpm android
 
 # For Production Build
 pnpm android:prod  # Custom command added in package.json
