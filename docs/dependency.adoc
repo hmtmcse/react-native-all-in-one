@@ -46,3 +46,5 @@ npx expo install @shopify/flash-list
 == UI Dependency
 * https://github.com/Shopify/flash-list
 * https://reactnativereusables.com/
+* https://reactnavigation.org/
+* https://rnprimitives.com/
